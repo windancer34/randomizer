@@ -1,0 +1,30 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+}
+
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+}
+function keyPressed(){
+  requestdogs();
+}
+function requestcats(){
+  var xhttp = new XMLHttpRequest();
+  Xhttp.onreadystatechange = function(){
+    if (this.readyTState ==4&& this.status ==200){
+      initialresponse=JSON.parse(this.responseTest);
+      for (i=0; i<initialresponse.data.length; i++){
+        catfacts.push(initialresponse.data[i].fact);
+      }
+      catsset=true;
+    }
+  };
+  xhttp.open("GET", "https//catfact.ninja/facts?limit=8", true);
+  shttp.setRequestHeader("Content-type", "application/json");
+  xhttp.send();
+  
+}
