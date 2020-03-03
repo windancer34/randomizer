@@ -1,3 +1,6 @@
+let initialresponse;
+let dogfacts = [];
+
 function setup() {
   createCanvas(400, 400);
 }
@@ -16,13 +19,13 @@ function keyPressed(){
 function requestcats(){
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function(){
-    if (this.readyTState ==4&& this.status ==200){
-      initialresponse=JSON.parse(this.responseTest);
+    if (this.readyState ==4& & this.status ==200){
+      initialresponse=JSON.parse(this.responseText);
       for (i=0; i<initialresponse.data.length; i++){
-        catfacts.push(initialresponse.data[i].fact);
+        dogfacts.push(initialresponse.data[i].fact);
         console.log(initialresponse.data[i].fact);
       }
-      catsset=true;
+      //catsset=true;
     }
   };
   xhttp.open("GET", "https://catfact.ninja/facts?limit=8", true);
