@@ -25,7 +25,7 @@ function requestcats(){
       catsset=true;
     }
   };
-  xhttp.open("GET", "https//catfact.ninja/facts?limit=8", true);
+  xhttp.open("GET", "https://catfact.ninja/facts?limit=8", true);
   xhttp.setRequestHeader("Content-type", "application/json");
   xhttp.send();
   
