@@ -4,6 +4,7 @@ function setup() {
 
 function draw() {
   background(220);
+  
 }
 
 function windowResized(){
@@ -19,6 +20,7 @@ function requestcats(){
       initialresponse=JSON.parse(this.responseTest);
       for (i=0; i<initialresponse.data.length; i++){
         catfacts.push(initialresponse.data[i].fact);
+        console.log(initialresponse.data[i].fact);
       }
       catsset=true;
     }
