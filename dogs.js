@@ -15,7 +15,7 @@ function keyPressed(){
 }
 function requestcats(){
   var xhttp = new XMLHttpRequest();
-  Xhttp.onreadystatechange = function(){
+  xhttp.onreadystatechange = function(){
     if (this.readyTState ==4&& this.status ==200){
       initialresponse=JSON.parse(this.responseTest);
       for (i=0; i<initialresponse.data.length; i++){
