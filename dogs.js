@@ -19,7 +19,7 @@ function keyPressed(){
 function requestcats(){
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function(){
-    if (this.readyState ==4& & this.status ==200){
+    if (this.readyState ==4 && this.status ==200){
       initialresponse=JSON.parse(this.responseText);
       for (i=0; i<initialresponse.data.length; i++){
         dogfacts.push(initialresponse.data[i].fact);
