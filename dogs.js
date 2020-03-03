@@ -21,10 +21,8 @@ function requestcats(){
   xhttp.onreadystatechange = function(){
     if (this.readyState ==4 && this.status ==200){
       initialresponse=JSON.parse(this.responseText);
-      for (i=0; i<initialresponse.data.length; i++){
-        dogfacts.push(initialresponse.data[i].fact);
-        console.log(initialresponse.data[i].fact);
-      }
+      dogfacts.push(initialresponse.message);
+      console.log(initialresponse.message);
       //catsset=true;
     }
   };
