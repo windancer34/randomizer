@@ -11,7 +11,7 @@ function windowResized(){
   resizeCanvas(windowWidth, windowHeight);
 }
 function keyPressed(){
-  requestdogs();
+  requestcats();
 }
 function requestcats(){
   var xhttp = new XMLHttpRequest();
