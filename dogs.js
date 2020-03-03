@@ -27,7 +27,6 @@ function requestcats(){
     }
   };
   xhttp.open("GET", "https://dog.ceo/api/breeds/image/random", true);
-  xhttp.setRequestHeader("Content-type", "json");
   xhttp.send();
   
 }
